@@ -1,0 +1,2 @@
+class RecruitTagRelation < ApplicationRecord
+end
