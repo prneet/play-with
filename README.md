@@ -26,15 +26,15 @@ Things you may want to cover:
 
 ## recruits テーブル
 
-| Column      | Type       | Options     |
-| ----------- | ---------- | ----------- |
-| name        | string     | null: false |
-| contact_id  | integer    | null: false |
-| player_name | string     | null: false |
-| style_id    | integer    | null: false |
-| sex_id      | integer    | null: false |
-| text        | string     | null: false |
-| edit_pass   | string     | null: false |
+| Column          | Type       | Options     |
+| --------------- | ---------- | ----------- |
+| name            | string     | null: false |
+| contact_id      | integer    | null: false |
+| player_name     | string     | null: false |
+| style_id        | integer    | null: false |
+| sex_id          | integer    | null: false |
+| text            | string     | null: false |
+| password_digest | string     |             |
 
 ### Association
 
