@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_11_183529) do
+ActiveRecord::Schema.define(version: 2020_09_11_224433) do
 
   create_table "recruit_tag_relations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "recruit_id", null: false
@@ -28,9 +28,9 @@ ActiveRecord::Schema.define(version: 2020_09_11_183529) do
     t.integer "style_id", null: false
     t.integer "sex_id", null: false
     t.string "text", null: false
-    t.string "edit_pass", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "password_digest"
   end
 
   create_table "tags", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

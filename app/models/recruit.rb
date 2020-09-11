@@ -5,4 +5,5 @@ class Recruit < ApplicationRecord
   belongs_to_active_hash :contact
   belongs_to_active_hash :style
   belongs_to_active_hash :sex
+  has_secure_password
 end
