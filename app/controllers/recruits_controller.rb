@@ -1,5 +1,6 @@
 class RecruitsController < ApplicationController
   def index
+    @recruits = Recruit.all
   end
 
   private
@@ -12,5 +13,4 @@ class RecruitsController < ApplicationController
     params.require(:recruit).permit(:name, :contact_id, :player_name, :style_id, :sex_id, :text, :password)
   end
 
-  
 end
