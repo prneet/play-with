@@ -1,115 +1,46 @@
+<div class="header">
+  <div class="service-title">
+    <h2><%=link_to "Play-with", "#", class:"title-name" %></h2>
+  </div>
+  <div class="title-contents">
+    <h2 class="service-plan">
+      PCゲーム募集示板
+    </h2>
+    <p class="service-explan">
+      フレンドやパーティを募集する場所です
+    </p>
+  </div>
+  <div class="create-recruit">
+    <%= link_to "投稿する", "#", class:"new-btn" %>
+  </div>
+</div>
 <!-- Wrapper -->
-<div class="wrapper style1">
-  <%= render "shared/header" %>
-
-<%# Play-With帯部分 %>
-  <div class='title-contents'>
+<div class="wrapper">
+  <div class="side-bar">
+    <%= render "shared/side_bar" %>
+  </div>
+  <div class="recruits-main">
+    <%= render "shared/main_content" %>
+  </div>
+</div>
+<%#Play-With帯部分 %>
+  <%# <div class='title-contents'>
     <h2 class='service-title'>
       PCゲームのフレンドを募集する掲示板
     </h2>
     <p class='service-explain'>
       ゲームをより楽しめるように、フレンドやパーティを募集する場所です
     </p>
-  </div>
-  <%# /Play-with帯部分  %>
+  </div> %>
+  <%# /Play-with帯部分 
 
 <h2>募集一覧</h2>
 <%= link_to "投稿する", new_recruit_path, class:"post" %>
 
-<ul class='recruit-list'>
+<%# <ul class='recruit-list'>
   <% @recruits.each do |recruit| %>
-    <li class='list'>
+    <%# <li class='list'>
       <%= link_to recruit.name, recruit_path(recruit.id), method: :get %>
-    </li>
-  <% end %>
-</ul>
-	<!-- Banner -->
-					<div id="banner" class="container">
-						<section>
-              <div class='title-contents'>
-                <h2 class='service-title'>
-                  Play-With
-                </h2>
-							  <p class='service-explain'>
-                  ゲームをより楽しめるように、フレンドやパーティを募集する場所です
-                </p>
-              </div>
-						</section>
-					</div>
-
-				<!-- Extra -->
-					<div id="extra">
-						<div class="container">
-							<div class="row no-collapse-1">
-								<section class="4u"> <a href="#" class="image featured"><img src="images/pic01.jpg" alt=""></a>
-									<div class="box">
-										<p>Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum  wisi maecenas ligula.</p>
-										<a href="#" class="button">Read More</a> </div>
-								</section>
-								<section class="4u"> <a href="#" class="image featured"><img src="images/pic02.jpg" alt=""></a>
-									<div class="box">
-										<p>Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum  wisi maecenas ligula.</p>
-										<a href="#" class="button">Read More</a> </div>
-								</section>
-								<section class="4u"> <a href="#" class="image featured"><img src="images/pic03.jpg" alt=""></a>
-									<div class="box">
-										<p>Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum  wisi maecenas ligula.</p>
-										<a href="#" class="button">Read More</a> </div>
-								</section>
-							</div>
-							<div class="row no-collapse-1">
-								<section class="4u"> <a href="#" class="image featured"><img src="images/pic01.jpg" alt=""></a>
-									<div class="box">
-										<p>Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum  wisi maecenas ligula.</p>
-										<a href="#" class="button">Read More</a> </div>
-								</section>
-								<section class="4u"> <a href="#" class="image featured"><img src="images/pic02.jpg" alt=""></a>
-									<div class="box">
-										<p>Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum  wisi maecenas ligula.</p>
-										<a href="#" class="button">Read More</a> </div>
-								</section>
-								<section class="4u"> <a href="#" class="image featured"><img src="images/pic03.jpg" alt=""></a>
-									<div class="box">
-										<p>Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum  wisi maecenas ligula.</p>
-										<a href="#" class="button">Read More</a> </div>
-								</section>
-							</div>
-						</div>
-					</div>
-
-				<!-- Main -->
-					<div id="main">
-						<div class="container">
-							<div class="row"> 
-								
-								<!-- Content -->
-								<div class="6u">
-									<section>
-										<ul class="style">
-											<li class="fa fa-wrench">
-												<h3>Integer ultrices</h3>
-												<span>In posuere eleifend odio. Quisque semper augue mattis wisi. Maecenas ligula. Pellentesque viverra vulputate enim. Aliquam erat volutpat. Maecenas condimentum enim tincidunt risus accumsan.</span> </li>
-											<li class="fa fa-leaf">
-												<h3>Aliquam luctus</h3>
-												<span>In posuere eleifend odio. Quisque semper augue mattis wisi. Maecenas ligula. Pellentesque viverra vulputate enim. Aliquam erat volutpat. Maecenas condimentum enim tincidunt risus accumsan.</span> </li>
-										</ul>
-									</section>
-								</div>
-								<div class="6u">
-									<section>
-										<ul class="style">
-											<li class="fa fa-cogs">
-												<h3>Integer ultrices</h3>
-												<span>In posuere eleifend odio. Quisque semper augue mattis wisi. Maecenas ligula. Pellentesque viverra vulputate enim. Aliquam erat volutpat. Maecenas condimentum enim tincidunt risus accumsan.</span> </li>
-											<li class="fa fa-road">
-												<h3>Aliquam luctus</h3>
-												<span>In posuere eleifend odio. Quisque semper augue mattis wisi. Maecenas ligula. Pellentesque viverra vulputate enim. Aliquam erat volutpat. Maecenas condimentum enim tincidunt risus accumsan.</span> </li>
-										</ul>
-									</section>
-								</div>
-							</div>
-						</div>
-					</div>
-
-</div>
-<%= render "shared/footer" %>
+    <%# </li> %>
+  <%# <% end %>
+<%# </ul> %>
