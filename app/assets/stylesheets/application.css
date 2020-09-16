@@ -11,40 +11,32 @@
   justify-content: space-between;
   align-items: center;
 }
-
 .service-title{
   padding: 15px;
   border: 1px solid darkslategray;
 }
-
 .title-name{
   text-decoration: none;
   color: black;
   font-size: 30px;
   font-style: oblique;
 }
-
-
 .title-contents{
   display: flex;
   align-items: center;
   flex-direction: column;
 }
-
 .service-plan{
 font-size: 24px;
 }
-
 .service-explan{
 font-size: 15px;
 }
-
 .create-recruit{
   padding: 15px;
   border: 1px double darkslategray;
   background-color: darkslateblue;
 }
-
 .new-btn{
   text-decoration: none;
   color: tomato;
@@ -58,8 +50,24 @@ font-size: 15px;
   background-color: darkslateblue;
   width: 200px;
   height: calc(100vh - 100px);
-  padding: 0 20px;
+  padding: 10px 20px;
 }
+.tags{
+  padding: 20px 10px;
+  overflow: scroll;
+}
+.tag{
+  display: flex;
+}
+.tag-name{
+  text-decoration: none;
+  color: white;
+}
+.tag-count{
+  color: white;
+  margin-left: 5px;
+}
+
 .recruits-main {
   background-color: darkviolet;
   width: calc(100% - 200px);
