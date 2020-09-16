@@ -1,6 +1,15 @@
 class RecruitsController < ApplicationController
   def index
-    @recruits = Recruit.all
+    @recruits = Recruit.order("created_at DESC")
+  end
+
+  def new
+  end
+
+  def create
+  end
+
+  def show
   end
 
   private
