@@ -14,6 +14,7 @@
 .service-title{
   padding: 15px;
   border: 1px solid darkslategray;
+  box-shadow: 4px 5px 10px 0px black;
 }
 .title-name{
   text-decoration: none;
@@ -47,7 +48,7 @@ font-size: 15px;
   display: flex;
 }
 .side-bar {
-  background-color: darkslateblue;
+  background-color: #253241;
   width: 200px;
   height: calc(100vh - 100px);
   padding: 10px 20px;
@@ -69,8 +70,89 @@ font-size: 15px;
 }
 
 .recruits-main {
-  background-color: darkviolet;
+  background-color: #5a5a88;
   width: calc(100% - 200px);
   height: calc(100vh - 100px);
   padding: 40px;
+  overflow: scroll;
+}
+.recruits{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.recruit{
+  border: 2px solid white;
+  background-color: #2f3341;
+  color: white;
+  height: 300px;
+  width: 250px;
+  padding: 15px;
+  margin: 15px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 7px 7px 15px 0px black;
+}
+.upper-rec{
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  color: black;
+  font-size: 18px;
+}
+.rec-user{
+  background-color: indianred;
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+}
+.rec-style{
+  border: solid 1px white;
+  padding: 5px;
+  font-weight: bold;
+}
+.mid-rec{
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  text-align: center;
+  border-bottom: 1px solid white;
+}
+.rec-plat{
+  width: 20%;
+  margin-right: 5px;
+}
+.rec-userid{
+  width: 65%;
+  overflow: hidden;
+  padding: 0 5px;
+}
+.lower-rec{
+  height: 185px;
+  position: relative;
+}
+.rec-tags{
+  height: 46px;
+  display: flex;
+  font-size: 13px;
+  padding: 10px
+}
+.rec-tag{
+  color: #fff;
+  background:darkblue;
+  margin: 0 5px;
+  padding: 3px;
+  box-shadow: 4px 4px black;
+}
+.rec-text{
+  height: 114px;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+.rec-time{
+  height: 25px;
+  font-size: 14px;
+  padding: 5px;
+  text-align: right;
 }
