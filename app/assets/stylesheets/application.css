@@ -35,13 +35,14 @@ font-size: 15px;
 }
 .create-recruit{
   padding: 15px;
-  border: 1px double darkslategray;
+  border-radius: 20px;
   background-color: darkslateblue;
 }
 .new-btn{
   text-decoration: none;
-  color: tomato;
   font-size: 20px;
+  color: #fff;
+  border: 0;
 }
 
 .wrapper {
