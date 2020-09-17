@@ -17,6 +17,22 @@ class RecruitsController < ApplicationController
     end
   end
 
+  def update
+    if @recruit.update(recruit_params)
+      redirect_to recruit_path(params[:id])
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    if @recruit.destroy
+      redirect_to root_path
+    else
+      render :show
+    end
+  end
+
   private
 
   def set_recruit
