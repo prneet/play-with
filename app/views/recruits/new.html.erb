@@ -1,0 +1,41 @@
+
+<%= render "shared/header" %>
+<div class="wrapper">
+  <div class="side-bar">
+    <%= render "shared/side_bar" %>
+  </div>
+  <div class="recruits-main">
+    <div class="rec-form">
+      <%= form_with(model: @recruit, local: true) do |f| %>
+        <div class="form-text">
+          <div>ニックネーム</div>
+          <%= f.text_area :name, class:"rec-str", id:"rec-name", placeholder:"ニックネーム", maxlength:"10" %>
+        </div>
+        <div class="form-text">
+          <div>連絡ツール</div>
+          <%= f.collection_select(:contact_id, Contact.all, :id, :name, {}, {class:"select-box", id:"rec-contact"}) %>
+        </div>
+        <div class="form-text">
+          <div>連絡先</div>
+          <%= f.text_area :player_name, class:"rec-str", id:"rec-player", placeholder:"連絡ID", maxlength:"30" %>
+        </div>
+        <div class="form-text">
+          <div>プレイスタイル</div>
+          <%= f.collection_select(:style_id, Style.all, :id, :name, {}, {class:"select-box", id:"rec-style"}) %>
+        </div>
+        <div class="form-text">
+          <%= f.text_area :text, class:"rec-text", id:"rec-player", maxlength:"50" %>
+        </div>
+        <div class="form-text">
+          <div>性別</div>
+            <%= f.collection_select(:sex_id, Sex.all, :id, :name, {}, {class:"select-box", id:"rec-sex"}) %>
+          </div>
+          <div class="form-text">
+            <div>編集・削除パス</div>
+            <%= f.password_field :password, class:"rec-hidden", id:"rec-pass", maxlength:"8" %>
+          </div>
+        <%= f.submit "投稿する" ,class:"rec-btn" %>
+      <% end %>
+    </div>
+  </div>
+</div>

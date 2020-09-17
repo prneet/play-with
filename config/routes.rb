@@ -1,3 +1,10 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  root to: 'recruits#index'
+  resources :recruits do
+    collection do
+      get 'search'
+    end
+  end
+  get 'recruit_with_pass/:id', to: 'recruits#recruit_with_pass'
+  post 'recruit_with_pass/:id', to: 'recruits#authenticate'
 end

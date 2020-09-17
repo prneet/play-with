@@ -1,15 +1,229 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: #253141;
+  height: 100px;
+  width: 100vw;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.service-title{
+  padding: 15px;
+  border: 1px solid darkslategray;
+  box-shadow: 4px 5px 10px 0px black;
+}
+.title-name{
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+  font-style: oblique;
+}
+.title-contents{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.service-plan{
+font-size: 24px;
+}
+.service-explan{
+font-size: 15px;
+}
+.create-recruit{
+  padding: 15px;
+  border-radius: 20px;
+  background-color: darkslateblue;
+}
+.new-btn{
+  text-decoration: none;
+  font-size: 20px;
+  color: #fff;
+  border: 0;
+}
+
+.wrapper {
+  display: flex;
+}
+.side-bar {
+  background-color: #253241;
+  width: 200px;
+  height: calc(100vh - 100px);
+  padding: 10px 20px;
+}
+.tags{
+  padding: 20px 10px;
+  overflow: scroll;
+}
+.tag{
+  display: flex;
+}
+.tag-name{
+  text-decoration: none;
+  color: white;
+}
+.tag-count{
+  color: white;
+  margin-left: 5px;
+}
+
+.recruits-main {
+  background-color: #5a5a88;
+  width: calc(100% - 200px);
+  height: calc(100vh - 100px);
+  padding: 40px;
+  overflow: scroll;
+  position: relative;
+}
+.search-form{
+  text-align: center;
+  padding: 20px;
+}
+.search-form .search-input {
+  width: 30%;
+  margin-right: 10px;
+}
+form input[type="submit"] {
+  background-color: #57C3E9;
+  border-radius: 20px;
+  color: #fff;
+  border: 0;
+  font-size: 18px;
+}
+.search-btn {
+  width: 10%;
+}
+.recruits{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.recruit{
+  border: 2px solid white;
+  background-color: #2f3341;
+  color: white;
+  height: 300px;
+  width: 250px;
+  padding: 15px;
+  margin: 15px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 7px 7px 15px 0px black;
+  border-radius: 10px;
+}
+.upper-rec{
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  color: black;
+  font-size: 18px;
+}
+.rec-user{
+  background-color: white;
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+}
+.man-col{
+  background-color: blue;
+}
+.woman-col{
+  background-color: indianred;
+}
+.rec-style{
+  border: solid 1px white;
+  padding: 5px;
+  font-weight: bold;
+}
+.mid-rec{
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  text-align: center;
+  border-bottom: 1px solid white;
+}
+.rec-plat{
+  width: 20%;
+  margin-right: 5px;
+}
+.rec-userid{
+  width: 65%;
+  overflow: hidden;
+  padding: 0 5px;
+}
+.lower-rec{
+  height: 185px;
+  position: relative;
+}
+.rec-tags{
+  height: 46px;
+  display: flex;
+  font-size: 13px;
+  padding: 10px
+}
+.rec-tag{
+  color: #fff;
+  background:darkblue;
+  margin: 0 5px;
+  padding: 3px;
+  box-shadow: 4px 4px black;
+}
+.rec-text{
+  height: 114px;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+.rec-time{
+  height: 25px;
+  font-size: 14px;
+  padding: 5px;
+  text-align: right;
+}
+
+/* recruits/new */
+.rec-form{
+  background-color: #9695ca;
+  height: 600px;
+  width: 800px;
+  position: absolute;
+  left: 15%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 3%;
+  border-radius: 10px;
+}
+.form-text{
+  font-family: serif;
+}
+.rec-btn{
+  margin: 10px;
+  height: 30px;
+  width: 100px;
+}
+.select-box{
+  width: 150px;
+  height: 30px;
+}
+.rec-str{
+  width: 300px;
+  height: 40px;
+  border-radius: 4px;
+  padding: 5px;
+}
+.rec-text{
+  margin: 10px 0 0;
+  width: 300px;
+  border-radius: 5px;
+  padding: 5px;
+}
+.rec-hidden{
+  width: 300px;
+  height: 40px;
+  border-radius: 4px;
+  padding: 5px;
+}
