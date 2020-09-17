@@ -37,6 +37,8 @@ font-size: 15px;
   padding: 15px;
   border-radius: 20px;
   background-color: darkslateblue;
+  border: 2px solid white;
+  box-shadow: 7px 7px 15px 0px black;
 }
 .new-btn{
   text-decoration: none;
@@ -226,4 +228,42 @@ form input[type="submit"] {
   height: 40px;
   border-radius: 4px;
   padding: 5px;
+}
+
+/* recruit/show */
+.show-rec{
+  display: flex;
+}
+.shows-btn{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.edit-recruit{
+  padding: 15px;
+  border-radius: 20px;
+  background-color: darkgoldenrod;
+  margin: 30px 50px;
+  border: 2px solid white;
+  box-shadow: 7px 7px 15px 0px black;
+}
+.edit-btn{
+  text-decoration: none;
+  font-size: 20px;
+  color: #fff;
+  border: 0;
+}
+.destroy-recruit{
+  padding: 15px;
+  border-radius: 20px;
+  background-color: crimson;
+  margin: 30px 50px;
+  border: 2px solid white;
+  box-shadow: 7px 7px 15px 0px black;
+}
+.dlt-btn{
+  text-decoration: none;
+  font-size: 20px;
+  color: #fff;
+  border: 0;
 }

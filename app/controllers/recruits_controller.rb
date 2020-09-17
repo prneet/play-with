@@ -1,4 +1,5 @@
 class RecruitsController < ApplicationController
+  before_action :set_recruit, only: [:show, :edit, :update, :destroy]
   def index
     @recruits = Recruit.all.order("created_at DESC")
   end
@@ -14,9 +15,6 @@ class RecruitsController < ApplicationController
     else
       render :new
     end
-  end
-
-  def show
   end
 
   private
