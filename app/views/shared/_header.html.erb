@@ -1,1 +1,17 @@
 <!-- Header -->
+<div class="header">
+  <div class="service-title">
+    <h2><%=link_to "Play-with", root_path, class:"title-name" %></h2>
+  </div>
+  <div class="title-contents">
+    <h2 class="service-plan">
+      PCゲーム募集示板
+    </h2>
+    <p class="service-explan">
+      フレンドやパーティを募集できます
+    </p>
+  </div>
+  <div class="create-recruit">
+    <%= link_to "投稿する", new_recruit_path, class:"new-btn" %>
+  </div>
+</div>
