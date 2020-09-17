@@ -112,6 +112,7 @@ form input[type="submit"] {
   position: relative;
   overflow: hidden;
   box-shadow: 7px 7px 15px 0px black;
+  border-radius: 10px;
 }
 .upper-rec{
   height: 40px;
@@ -218,5 +219,11 @@ form input[type="submit"] {
   margin: 10px 0 0;
   width: 300px;
   border-radius: 5px;
+  padding: 5px;
+}
+.rec-hidden{
+  width: 300px;
+  height: 40px;
+  border-radius: 4px;
   padding: 5px;
 }

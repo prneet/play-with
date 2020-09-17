@@ -4,9 +4,16 @@ class RecruitsController < ApplicationController
   end
 
   def new
+    @recruit = Recruit.new
   end
 
   def create
+    @recruit = Recruit.new(recruit_params)
+    if @recruit.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   def show
@@ -21,5 +28,4 @@ class RecruitsController < ApplicationController
   def recruit_params
     params.require(:recruit).permit(:name, :contact_id, :player_name, :style_id, :sex_id, :text, :password)
   end
-
 end
