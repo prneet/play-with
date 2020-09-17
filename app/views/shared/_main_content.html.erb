@@ -7,7 +7,7 @@
   <% @recruits.each do |recruit| %>
     <li class="recruit">
       <div class="upper-rec">
-        <%= link_to recruit.name, "#", class:"rec-user" %>
+        <%= link_to recruit.name, recruit_path(recruit.id), class:"rec-user" %>
         <div class="rec-style">
           <%= recruit.style.name %>
         </div>
@@ -34,4 +34,4 @@
       </div>
     </li>
   <% end %>
-</div>
+</ul>

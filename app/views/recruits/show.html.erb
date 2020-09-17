@@ -1,0 +1,46 @@
+<%= render "shared/header" %>
+<div class="wrapper">
+  <div class="side-bar">
+    <%= render "shared/side_bar" %>
+  </div>
+  <div class="recruits-main">
+    <div class="show-rec">
+      <div class="recruit">
+        <div class="upper-rec">
+          <div class="rec-user"><%= @recruit.name %></div>
+          <div class="rec-style">
+            <%= @recruit.style.name %>
+          </div>
+        </div>
+        <div class="mid-rec">
+          <div class="rec-plat"><%= @recruit.contact.name %></div>
+          <div class="rec-userid"><%= @recruit.player_name %></div>
+        </div>
+        <div class="lower-rec">
+          <ul class="rec-tags">
+            <li class="rec-tag">
+              valorant
+            </li>
+            <li class="rec-tag">
+              apex
+            </li>
+          </ul>
+          <div class="rec-text">
+            <%= @recruit.text %>
+          </div>
+          <div class="rec-time">
+            <%= @recruit.created_at %>
+          </div>
+        </div>
+      </div>
+      <div class="shows-btn">
+        <div class="edit-recruit">
+          <%= link_to "編集する", edit_recruit_path(@recruit.id), class:"edit-btn" %>
+        </div>
+        <div class="destroy-recruit">
+          <%= link_to "削除する", delete_recg_path(@recruit.id), class:"dlt-btn" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -30,10 +30,10 @@
             <%= f.collection_select(:sex_id, Sex.all, :id, :name, {}, {class:"select-box", id:"rec-sex"}) %>
           </div>
           <div class="form-text">
-            <div>編集・削除パス(半角数字8桁以内)</div>
+            <div>編集・削除パス</div>
             <%= f.password_field :password, class:"rec-hidden", id:"rec-pass", maxlength:"8" %>
           </div>
-        <%= f.submit "投稿する" ,class:"rec-btn" %>
+        <%= f.submit "編集する" ,class:"rec-btn" %>
       <% end %>
     </div>
   </div>

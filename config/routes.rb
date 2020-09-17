@@ -5,6 +5,6 @@ Rails.application.routes.draw do
       get 'search'
     end
   end
-  get 'recruit_with_pass/:id', to: 'recruits#recruit_with_pass'
-  post 'recruit_with_pass/:id', to: 'recruits#authenticate'
+  get 'delete_with_pass/:id', to: 'recruits#delete_with_pass', as: 'delete_recg'
+  post 'delete_with_pass/:id', to: 'recruits#destroy', as: 'delete_recp'
 end
