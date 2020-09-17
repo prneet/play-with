@@ -1,5 +1,5 @@
 class RecruitsController < ApplicationController
-  before_action :set_recruit, only: [:show, :edit, :update, :destroy]
+  before_action :set_recruit, only: [:show, :edit, :update, :destroy, :delete_with_pass]
   def index
     @recruits = Recruit.all.order("created_at DESC")
   end
@@ -26,7 +26,8 @@ class RecruitsController < ApplicationController
   end
 
   def destroy
-    if @recruit.destroy
+    if @recruit && @recruit.authenticate(params[:recruit][:password])
+      @recruit.destroy
       redirect_to root_path
     else
       render :show

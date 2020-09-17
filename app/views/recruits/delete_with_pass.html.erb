@@ -5,7 +5,7 @@
   </div>
   <div class="recruits-main">
     <div class="rec-form">
-      <%= form_with(model: @recruit, local: true) do |f| %>
+      <%= form_with(model: @recruit, url: delete_recp_path(@recruit.id), method: :post, local: true) do |f| %>
         <div class="form-text">
           <div>ニックネーム</div>
           <%= f.text_area :name, class:"rec-str", id:"rec-name", placeholder:"ニックネーム", maxlength:"10" %>
@@ -30,10 +30,10 @@
             <%= f.collection_select(:sex_id, Sex.all, :id, :name, {}, {class:"select-box", id:"rec-sex"}) %>
           </div>
           <div class="form-text">
-            <div>編集・削除パス(半角数字8桁以内)</div>
+            <div>編集・削除パス</div>
             <%= f.password_field :password, class:"rec-hidden", id:"rec-pass", maxlength:"8" %>
           </div>
-        <%= f.submit "投稿する" ,class:"rec-btn" %>
+        <%= f.submit "削除する", class:"rec-btn"%>
       <% end %>
     </div>
   </div>
