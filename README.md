@@ -46,10 +46,10 @@ Things you may want to cover:
 
 ## recruit_tag_relations テーブル
 
-| Column  | Type       | Options                        |
-| ------  | ---------- | ------------------------------ |
-| recruit | references | null: false, foreign_key: true |
-| tags    | references | null: false, foreign_key: true |
+| Column  | Type       | Options           |
+| ------  | ---------- | ----------------- |
+| recruit | references | foreign_key: true |
+| tags    | references | foreign_key: true |
 
 ### Association
 
@@ -57,9 +57,9 @@ Things you may want to cover:
 - belongs_to :tag
 
 ## tags テーブル
-| Column | Type   | Options                       |
-| ------ | ------ | ----------------------------- |
-| name   | string | null: false, uniqueness: true |
+| Column   | Type   | Options                       |
+| -------- | ------ | ----------------------------- |
+| tag_name | string | null: false, uniqueness: true |
 
 ### Association
 

@@ -1,0 +1,28 @@
+<li class="recruit">
+  <div class="upper-rec">
+    <%= link_to recruit.name, recruit_path(recruit.id), class:"rec-user" %>
+    <div class="rec-style">
+      <%= recruit.style.name %>
+    </div>
+  </div>
+  <div class="mid-rec">
+    <div class="rec-plat"><%= recruit.contact.name %></div>
+    <div class="rec-userid"><%= recruit.player_name %></div>
+  </div>
+  <div class="lower-rec">
+    <ul class="rec-tags">
+      <div class="rec-tag">
+        valorant
+      </div>
+      <div class="rec-tag">
+        apex
+      </div>
+    </ul>
+    <div class="rec-text">
+      <%= recruit.text %>
+    </div>
+    <div class="rec-time">
+      <%= recruit.created_at %>
+    </div>
+  </div>
+</li>
