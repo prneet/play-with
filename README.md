@@ -57,9 +57,9 @@ Things you may want to cover:
 - belongs_to :tag
 
 ## tags テーブル
-| Column | Type   | Options                       |
-| ------ | ------ | ----------------------------- |
-| name   | string | null: false, uniqueness: true |
+| Column | Type   | Options     |
+| ------ | ------ | ----------- |
+| name   | string | null: false |
 
 ### Association
 
