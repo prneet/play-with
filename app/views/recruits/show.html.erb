@@ -19,10 +19,7 @@
         <div class="lower-rec">
           <ul class="rec-tags">
             <li class="rec-tag">
-              valorant
-            </li>
-            <li class="rec-tag">
-              apex
+              <%= link_to tag.tag_name, tag_recruits_path(tag_id: tag.id)%>
             </li>
           </ul>
           <div class="rec-text">

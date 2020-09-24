@@ -3,7 +3,7 @@ class RecruitsController < ApplicationController
   before_action :set_tag
 
   def index
-    @recruits = Recruit.all.order("created_at DESC") 
+    @recruits = Recruit.includes(:tags).order("created_at DESC") 
   end
 
   def new

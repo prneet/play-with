@@ -1,28 +1,34 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
 
-* Ruby version
+# アプリケーション概要
+- PCゲームを共にプレイする人を募集できます。
 
-* System dependencies
+# URL
+- 後日追記
 
-* Configuration
+# 利用方法
+- 募集者は投稿ボタンを押して、募集内容とpasswordを記載して投稿します。
+- 参加者は連絡先であるIDにコンタクトをとる事でプレイが可能となります。
 
-* Database creation
+# 目指した課題解決
+- オンラオインゲームでは現在誰かとプレイしたいがSNSの場合登録が必要、ゲームに特化していない掲示板では募集が混在している為、募集投稿又は参加するのに抵抗感を持っている人がいると考えます。
+- シンプルかつ手軽に使いやすいサイトを用意する事で、この問題の解決につながる部分があると考えました。
 
-* Database initialization
+# 洗い出した要件
+- 投稿機能
+- ゲームタイトルのタグ付機能
+- password認証編集機能
+- password認証削除機能
+- 投稿の検索機能
 
-* How to run the test suite
+# 実装した機能についてのGIFと説明	実装した機能について、それぞれどのような特徴があるのか列挙しましょう。GIFを添えることで、イメージがしやすくなります。
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 # テーブル設計
+
+## ER図
+https://app.diagrams.net/#G1IhZEzLAgK3XS-GZPCKAikXbPY8TlAMS1
 
 ## recruits テーブル
 
@@ -83,3 +89,7 @@ Things you may want to cover:
 | Column   | Type   | Options     |
 | -------- | ------ | ----------- |
 | name     | string | null: false |
+
+# 実装予定の機能	洗い出した要件の中から、今後実装予定のものがあれば記述しましょう。
+# ローカルでの動作方法	git cloneしてから、ローカルで動作をさせるまでに必要なコマンドを記述しましょう。この時、アプリケーション開発に使用した環境を併記することを忘れないでください（パッケージやRubyのバージョンなど）。
+* Ruby version 6.0.0

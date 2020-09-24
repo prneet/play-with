@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root to: 'recruits#index'
+  
   resources :recruits do
     collection do
       get 'search'
@@ -7,4 +8,8 @@ Rails.application.routes.draw do
   end
   get 'delete_with_pass/:id', to: 'recruits#delete_with_pass', as: 'delete_recg'
   post 'delete_with_pass/:id', to: 'recruits#destroy', as: 'delete_recp'
+
+  resources :tags do
+    get 'recruits', to: 'recruits#search'
+  end
 end

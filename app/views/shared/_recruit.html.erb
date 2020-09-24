@@ -11,12 +11,11 @@
   </div>
   <div class="lower-rec">
     <ul class="rec-tags">
-      <div class="rec-tag">
-        valorant
-      </div>
-      <div class="rec-tag">
-        apex
-      </div>
+      <% recruit.tags.each do |tag| %>
+        <li class="rec-tag">
+          <%= tag.tag_name %>
+        </li>
+      <% end %>
     </ul>
     <div class="rec-text">
       <%= recruit.text %>
