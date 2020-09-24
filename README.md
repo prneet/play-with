@@ -108,6 +108,10 @@ https://app.diagrams.net/#G1IhZEzLAgK3XS-GZPCKAikXbPY8TlAMS1
 - レスポンシブデザイン
 
 # ローカルでの動作方法
+bundle install
+rails db:create
+rails db:migrate
+rails s
 * Ruby version _6.0.0_
 * ruby '2.6.5'
 * mysql2
