@@ -26,18 +26,18 @@
 - 投稿機能実装
 募集者は全ての項目を入力して投稿ボタンを押すと、募集が出来ます。
 参加者は参加したい投稿の２行目のIDにコンタクトを取ることで参加できます。
-![投稿機能挙動](https://gyazo.com/2815f0b039ebed715f00705431e343a6)
+https://gyazo.com/2815f0b039ebed715f00705431e343a6
 - ゲームタイトルタグ付機能
 募集者は投稿にタグを設定することで参加者が投稿を見つけやすくなります。
 - 投稿検索機能
 募集者は自身の投稿を編集又は削除したい時、ニックネームで投稿を検索する事が可能です。
-![投稿検索機能](https://gyazo.com/ad3f9ebca5d71349fa98fe09c07cd54c)
+https://gyazo.com/ad3f9ebca5d71349fa98fe09c07cd54c
 - password認証編集機能
 投稿の内容を編集するには、設定したpasswordを入力する事が必要です。
-![password認証編集機能](https://gyazo.com/89e3ff38248855b3ced09fd38f3587c6)
+https://gyazo.com/89e3ff38248855b3ced09fd38f3587c6
 - password認証削除機能
 投稿を削除するには、設定したpasswordを入力する事が必要です。
-![password認証削除機能](https://gyazo.com/c5e33b92d564c2a6148f665f5ac7b6af)
+https://gyazo.com/c5e33b92d564c2a6148f665f5ac7b6af
 # テーブル設計
 
 ## ER図
