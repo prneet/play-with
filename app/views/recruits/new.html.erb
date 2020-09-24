@@ -5,7 +5,7 @@
   </div>
   <div class="recruits-main">
     <div class="rec-form">
-      <%= form_with(model: @recruit, local: true) do |f| %>
+      <%= form_with model: @recruit, url: recruits_path, local: true do |f| %>
         <div class="form-text">
           <div>ニックネーム</div>
           <%= f.text_area :name, class:"rec-str", id:"rec-name", placeholder:"ニックネーム", maxlength:"10" %>
@@ -21,6 +21,10 @@
         <div class="form-text">
           <div>プレイスタイル</div>
           <%= f.collection_select(:style_id, Style.all, :id, :name, {}, {class:"select-box", id:"rec-style"}) %>
+        </div>
+        <div class="form-text">
+          <div>タグ</div>
+          <%= f.text_field :tag_name, class:"rec-str", id:"tag-field" %>
         </div>
         <div class="form-text">
           <%= f.text_area :text, class:"rec-text", id:"rec-player", maxlength:"50" %>

@@ -13,8 +13,8 @@
 ActiveRecord::Schema.define(version: 2020_09_11_224433) do
 
   create_table "recruit_tag_relations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "recruit_id", null: false
-    t.bigint "tag_id", null: false
+    t.bigint "recruit_id"
+    t.bigint "tag_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["recruit_id"], name: "index_recruit_tag_relations_on_recruit_id"
@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 2020_09_11_224433) do
   end
 
   create_table "tags", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name", null: false
+    t.string "tag_name", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

@@ -18,18 +18,17 @@
         </div>
         <div class="lower-rec">
           <ul class="rec-tags">
+            <% @recruit.tags.each do |tag| %>
             <li class="rec-tag">
-              valorant
+              <%= tag.tag_name %>
             </li>
-            <li class="rec-tag">
-              apex
-            </li>
+            <% end %>
           </ul>
           <div class="rec-text">
             <%= @recruit.text %>
           </div>
           <div class="rec-time">
-            <%= @recruit.created_at %>
+            <%= l @recruit.created_at %>
           </div>
         </div>
       </div>

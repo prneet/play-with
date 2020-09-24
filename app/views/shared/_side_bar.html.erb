@@ -1,14 +1,8 @@
-<div class="tags">
-  <div class="tag">
-    <%= link_to "test", "#", class:"tag-name" %>
-    <div class="tag-count">
-      (000)
-    </div>
-  </div>
-  <div class="tag">
-    <%= link_to "test", "#", class:"tag-name" %>
-    <div class="tag-count">
-      (000)
-    </div>
-  </div>
-</div>
+<ul class="tags">
+  <%@tags.each do |tag| %>
+    <li class="tag">
+      <%= link_to tag.tag_name, tag_recruits_path(tag_id: tag.id), class:"tag-name" %>
+      <div class="tag-count">(<%= tag.recruits.count %>)</div>
+    </li>
+  <%end%>
+</ul>
