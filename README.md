@@ -1,28 +1,47 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# アプリケーション概要
+- PCゲームを共にプレイする人を募集できます。
 
-Things you may want to cover:
+# URL
+- 後日追記
 
-* Ruby version
+# 利用方法
+- 募集者は投稿ボタンを押して、募集内容とpasswordを記載して投稿します。
+- 参加者は連絡先であるIDにコンタクトをとる事でプレイが可能となります。
 
-* System dependencies
+# 目指した課題解決
+- オンラオインゲームでは現在誰かとプレイしたいがSNSの場合登録が必要、ゲームに特化していない掲示板では募集が混在している為、募集投稿又は参加するのに抵抗感を持っている人がいると考えます。
+- シンプルかつ手軽に使いやすいサイトを用意する事で、この問題の解決につながる部分があると考えました。
 
-* Configuration
+# 洗い出した要件
+- 投稿機能
+- ゲームタイトルタグ付機能
+- 投稿検索機能
+- password認証編集機能
+- password認証削除機能
+- レスポンシブデザイン
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# 実装した機能についてのGIFと説明
+- 投稿機能実装
+募集者は全ての項目を入力して投稿ボタンを押すと、募集が出来ます。
+参加者は参加したい投稿の２行目のIDにコンタクトを取ることで参加できます。
+![投稿機能挙動](https://gyazo.com/2815f0b039ebed715f00705431e343a6)
+- ゲームタイトルタグ付機能
+募集者は投稿にタグを設定することで参加者が投稿を見つけやすくなります。
+- 投稿検索機能
+募集者は自身の投稿を編集又は削除したい時、ニックネームで投稿を検索する事が可能です。
+![投稿検索機能](https://gyazo.com/ad3f9ebca5d71349fa98fe09c07cd54c)
+- password認証編集機能
+投稿の内容を編集するには、設定したpasswordを入力する事が必要です。
+![password認証編集機能](https://gyazo.com/89e3ff38248855b3ced09fd38f3587c6)
+- password認証削除機能
+投稿を削除するには、設定したpasswordを入力する事が必要です。
+![password認証削除機能](https://gyazo.com/c5e33b92d564c2a6148f665f5ac7b6af)
 # テーブル設計
+
+## ER図
+https://app.diagrams.net/#G1IhZEzLAgK3XS-GZPCKAikXbPY8TlAMS1
 
 ## recruits テーブル
 
@@ -46,10 +65,10 @@ Things you may want to cover:
 
 ## recruit_tag_relations テーブル
 
-| Column  | Type       | Options                        |
-| ------  | ---------- | ------------------------------ |
-| recruit | references | null: false, foreign_key: true |
-| tags    | references | null: false, foreign_key: true |
+| Column  | Type       | Options           |
+| ------  | ---------- | ----------------- |
+| recruit | references | foreign_key: true |
+| tags    | references | foreign_key: true |
 
 ### Association
 
@@ -57,9 +76,9 @@ Things you may want to cover:
 - belongs_to :tag
 
 ## tags テーブル
-| Column | Type   | Options     |
-| ------ | ------ | ----------- |
-| name   | string | null: false |
+| Column   | Type   | Options                       |
+| -------- | ------ | ----------------------------- |
+| tag_name | string | null: false, uniqueness: true |
 
 ### Association
 
@@ -83,3 +102,11 @@ Things you may want to cover:
 | Column   | Type   | Options     |
 | -------- | ------ | ----------- |
 | name     | string | null: false |
+
+# 実装予定の機能
+- レスポンシブデザイン
+
+# ローカルでの動作方法
+* Ruby version _6.0.0_
+* ruby '2.6.5'
+* mysql2

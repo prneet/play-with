@@ -76,7 +76,7 @@ font-size: 15px;
   background-color: #5a5a88;
   width: calc(100% - 200px);
   height: calc(100vh - 100px);
-  padding: 40px;
+  padding: 20px;
   overflow: scroll;
   position: relative;
 }
@@ -189,7 +189,7 @@ form input[type="submit"] {
 /* recruits/new */
 .rec-form{
   background-color: #9695ca;
-  height: 600px;
+  height: 650px;
   width: 800px;
   position: absolute;
   left: 15%;
