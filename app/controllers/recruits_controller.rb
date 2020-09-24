@@ -21,7 +21,8 @@ class RecruitsController < ApplicationController
   end
 
   def update
-    if @recruit.update(recruit_params)
+    if @recruit && @recruit.authenticate(params[:recruit][:password]) 
+      @recruit.update(recruit_params)
       redirect_to recruit_path(params[:id])
     else
       render :edit
