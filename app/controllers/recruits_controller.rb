@@ -39,7 +39,7 @@ class RecruitsController < ApplicationController
   end
 
   def search
-    @recruits = Recruit.search(params[:keyword])
+    @recruits = params[:tag_id].present? ? Tag.find(params[:tag_id]).recruits : Recruit.search(params[:keyword])
   end
 
   private
