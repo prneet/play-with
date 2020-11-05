@@ -3,7 +3,7 @@ class RecruitsController < ApplicationController
   before_action :set_tag
 
   def index
-    @recruits = Recruit.includes(:tags).order("created_at DESC") 
+    @recruits = Recruit.includes(:tags).order("created_at DESC")
   end
 
   def new
@@ -39,7 +39,7 @@ class RecruitsController < ApplicationController
   end
 
   def search
-    @recruits = params[:tag_id].present? ? Tag.find(params[:tag_id]).recruits : Recruit.search(params[:keyword])
+    @recruits = params[:tag_id].present? ? Tag.find(params[:tag_id]).recruits.order("created_at DESC") : Recruit.search(params[:keyword])
   end
 
   private
