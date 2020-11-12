@@ -39,7 +39,11 @@ class RecruitsController < ApplicationController
   end
 
   def search
-    @recruits = params[:tag_id].present? ? Tag.find(params[:tag_id]).recruits.order("created_at DESC") : Recruit.search(params[:keyword])
+    @recruits = if params[:tag_id].present?
+                  Tag.find(params[:tag_id]).recruits.order("created_at DESC")
+                else
+                  Recruit.search(params[:keyword])
+                end
   end
 
   private
